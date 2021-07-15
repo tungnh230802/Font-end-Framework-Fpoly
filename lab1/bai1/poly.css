@@ -1,0 +1,43 @@
+*{
+    color: white;
+    box-sizing: border-box;
+}
+
+header{
+    height: 100px;
+    background-color: rgb(68, 0, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    height: 30px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    background-color: black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside{
+    background-color: aquamarine;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: rgb(255, 0, 119);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

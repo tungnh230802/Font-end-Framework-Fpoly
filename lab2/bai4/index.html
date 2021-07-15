@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping Mail</title>
+
+    <!-- Jquery -->
+    <script src="../../js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  </head>
+  <body>
+   <div class="container">
+        <!-- Button trigger modal -->
+    <button
+    type="button"
+    class="btn btn-primary btn-lg"
+    data-toggle="modal"
+    data-target="#myModal"
+  >
+    Nhập lương
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="myModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Nhập lương tháng 12</h4>
+        </div>
+        <div class="modal-body">
+          <div class="panel-body">
+            <form action="">
+              <div class="row">
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Mã nhân viên</label>
+                  <input placeholder="Mã nhân viên" type="text" class="form-control" />
+                </div>
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Họ và Tên</label>
+                  <input placeholder="Họ và Tên" type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="row">
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Câu lạc bộ</label>
+                  <input placeholder="Câu lạc bộ" type="text" class="form-control" />
+                </div>
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Lương</label>
+                  <input placeholder="Lương" type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="row">
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Thưởng</label>
+                  <input placeholder="Thưởng" type="text" class="form-control" />
+                </div>
+                <div action="" class="form-group col-sm-6">
+                  <label for="">Phụ cấp</label>
+                  <input placeholder="Phụ cấp" type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-12">
+                  <label for="">Ghi chú</label>
+                  <textarea placeholder="Ghi chú" class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default btn-primary">
+            <span class="glyphicon glyphicon-floppy-disk"></span> Lưu
+          </button>
+          <button class="btn btn-default" data-dismiss="modal">
+            <span class="glyphicon glyphicon-stop"></span> Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+  </body>
+</html>
