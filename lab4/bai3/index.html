@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- angular js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div ng-app="myapp" ng-controller="myctrl">
+      <table class="table table-bordered table-condensed">
+        <tr>
+          <th>Hình</th>
+          <th>Họ và Tên</th>
+          <th>Ngày sinh</th>
+          <th>Giới tính</th>
+          <th>Điểm</th>
+        </tr>
+        <tr ng-repeat="sv in students">
+          <td><img style="height: 100px;" src="../../images/{{sv.photo}}" /></td>
+          <td>{{sv.fullname}}</td>
+          <td>{{sv.birthday}}</td>
+          <td>{{sv.gender}}</td>
+          <td>{{sv.mark}}</td>
+        </tr>
+      </table>
+      <script>
+        angular.module("myapp", []).controller("myctrl", function ($scope) {
+          $scope.students = [
+            {
+              fullname: "Nguyễn Hoàng Tùng",
+              birthday: "23/08/2002",
+              gender: "Nam",
+              photo: "rem.jpg",
+              mark: 10,
+            },
+            {
+              fullname: "Nguyễn Trung Nhân",
+              birthday: "15/07/2002",
+              gender: "Nam",
+              photo: "rem.jpg",
+              mark: 7,
+            },
+            {
+              fullname: "Hoàng Đình Tuấn",
+              birthday: "24/08/2002",
+              gender: "Nam",
+              photo: "rem.jpg",
+              mark: 8,
+            },
+          ];
+        });
+      </script>
+    </div>
+  </body>
+</html>

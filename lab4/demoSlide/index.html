@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to angular</title>
+  </head>
+  <body ng-app="app">
+    <!-- <div ng-controller="ctrl">
+        <h1>{{welcome}}</h1>
+        <h3 ng-bind="welcome"></h3>
+        <input ng-model="welcome">
+    </div>
+    <script>
+        angular.module("app",[]).controller("ctrl", function($scope) {
+            $scope.welcome = "Welcome to fpt"
+        });
+    </script> -->
+    <!-- <div ng-controller="ctrl">
+        <h1 ng-mousemove="increateCount()">Đưa chuột vào đây</h1>
+        <h2>{{count}}</h2>
+    </div>
+    <script>
+        angular.module("app",[]).controller("ctrl", function($scope) {
+            $scope.count = 0;
+            $scope.increateCount = function() {
+                $scope.count++;
+            }
+        });
+    </script> -->
+    <!-- <div ng-controller="ctrl">
+        Nhập tên của bạn:
+        <input type="text" value="" ng-model="username">
+        <button ng-click="loichao()">In ra thông báo</button>
+        {{greeting}}
+    </div>
+    <script>
+        angular.module("app",[]).controller("ctrl",function($scope) {
+            $scope.loichao = function() {
+                $scope.greeting = "xin chào " + $scope.username + "!";
+            }
+        })
+    </script> -->
+    <div ng-controller="ctrl">
+      <p ng-repeat="sv in students">{{$index}}. {{sv}}</p>
+    </div>
+    <script>
+      angular.module("app", []).controller("ctrl", function($scope) {
+        $scope.students = ["tuấn", "tùng", "nhân"];
+      });
+    </script>
+  </body>
+</html>
