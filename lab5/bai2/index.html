@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- angular js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <style>
+      .container {
+        width: 600px;
+        border: 1px solid #999;
+        padding: 10px;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="myapp">
+      <div class="container">
+        <div ng-controller="myctrl1">
+          <form>
+            <div class="form-group">
+              <label>Họ và tên:</label>
+              <input ng-model="student.fullname" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Ngày sinh:</label>
+              <input ng-model="student.birthday" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Điểm:</label>
+              <input ng-model="student.mark" class="form-control" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-default" ng-click="save()">Lưu</button>
+              <button class="btn btn-default" ng-click="cancel()">Hủy</button>
+            </div>
+          </form>
+        </div>
+        <div ng-controller="myctrl2">
+          <table class="table">
+            <tr>
+              <th>Họ và Tên</th>
+              <th>Ngày sinh</th>
+              <th>Điểm</th>
+              <th></th>
+            </tr>
+            <tr ng-repeat="sv in students">
+              <td>{{sv.fullname}}</td>
+              <td>{{sv.birthday}}</td>
+              <td>{{sv.mark}}</td>
+              <td>
+                <a href="#" ng-click="edit($index)">edit</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("myapp", []);
+
+      app.controller("myctrl1", function ($scope, $rootScope) {
+        $scope.save = function () {
+          $rootScope.students[$rootScope.index] = $scope.student;
+        };
+
+        $scope.cancel = function () {
+          $rootScope.student = angular.copy(
+            $rootScope.students[$rootScope.index]
+          );
+        };
+      });
+
+      app.controller("myctrl2", function ($scope,  $rootScope) {
+        $rootScope.students = [
+          {
+            fullname: "nguyễn hoàng tùng",
+            birthday: "23/08/02",
+            mark: 9,
+          },
+          {
+            fullname: "Hoàng đình tuấn",
+            birthday: "24/08/02",
+            mark: 8,
+          },
+        ];
+
+        $scope.edit = function (index) {
+          $rootScope.index = index;
+          $rootScope.student = angular.copy($rootScope.students[index]);
+        };
+      });
+    </script>
+  </body>
+</html>
