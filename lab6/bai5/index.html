@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- angular js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- jQuery -->
+    <script src="../../js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../js/bootstrap.min.js"></script>
+    <style>
+      .container {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="myapp" ng-controller="myctrl" class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">THÔNG TIN SINH VIÊN</h2>
+        </div>
+        <div class="panel-body">
+          <form name="frmBonus">
+            <div class="form-group">
+              <label>Số Poly</label>
+              <input
+                ng-model="polyNumber"
+                type="number"
+                name="txtNum"
+                class="form-control"
+                polynumber
+              />
+              <span ng-show="frmBonus.txtNum.$invalid"
+                >Số này không chia hết cho 2 và 9</span
+              >
+            </div>
+            <hr />
+            <button class="button button-default">Kiểm tra</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("myapp", []);
+
+      app.controller("myctrl", function ($scope) {});
+      app.directive("polynumber", function () {
+        return {
+          require: "ngModel",
+          link: function (scope, element, atrr, mCtrl) {
+            mCtrl.$parsers.push(function (value) {
+              var number = parseInt(value);
+              if (number % 2 == 0 && number % 9 == 0) {
+                mCtrl.$setValidity("charE", true);
+              } else {
+                mCtrl.$setValidity("charE", false);
+              }
+              return value;
+            });
+          },
+        };
+      });
+    </script>
+  </body>
+</html>
