@@ -28,9 +28,17 @@
       <hr>
       <nav>
         <a href="#home">Home</a>
-        <a href="#about">About us</a>
-        <a href="#contact"></a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
       </nav>
+      <hr>
+      <article>
+        <div ng-show="loading" class="pull-right label label-info">Loading...</div>
+      </article>
+      <hr>
+      <footer>
+        FPT Polytech &copy; 2017.All rights reserved.
+      </footer>
     </div>
     <script>
       var app = angular.module("myapp", ["ngRouter"]);

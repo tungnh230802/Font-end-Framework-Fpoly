@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- angular js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- jQuery -->
+    <script src="../../js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../js/bootstrap.min.js"></script>
+    <style>
+      .container {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="myapp" ng-controller="myctrl" class="container">
+      <panel class="panel-default">
+        <div class="panel-heading">DANH SÁCH HÀNG HÓA</div>
+        <table class="table table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th>Sản Phẩm</th>
+              <th>Đơn Giá</th>
+              <th>Giảm Giá</th>
+              <th>Ngày</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="p in products">
+              <td>{{p.name | uppercase}}</td>
+              <td>{{p.price | currency}}</td>
+              <td>{{p.discount | percentage:2}}</td>
+              <td>{{p.date | date:"MMMM-dd, yyyy"}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </panel>
+    </div>
+    <script src="../js/Prods.js"></script>
+    <script>
+      var app = angular.module("myapp", []);
+      app.controller("myctrl", function ($scope, $http) {
+        $scope.products = list;
+      });
+
+      app.filter("percentage", function ($filter) {
+        return function (input, decimals) {
+          return $filter("number")(input * 100, decimals) + "%";
+        };
+      });
+    </script>
+  </body>
+</html>
