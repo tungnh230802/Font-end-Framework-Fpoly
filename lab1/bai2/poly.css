@@ -61,3 +61,14 @@ aside{
     margin-top: 5px;
     letter-spacing: 0.5px;
 }
+
+.footer{
+    justify-content: center;
+    background: gainsboro;
+    /* height: 40px; */
+}
+
+.footer p {
+    margin-bottom: 0;
+    padding:10px 0;
+}

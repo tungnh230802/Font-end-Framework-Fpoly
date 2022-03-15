@@ -1,99 +1,84 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping Mail</title>
-
-    <!-- Jquery -->
-    <script src="../../js/jquery.min.js"></script>
-
-    <!-- bootstrap -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    
-    <!-- poly.css file -->
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./poly.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <header class="header_area">
-          <nav class="navbar navbar-reverse">
-            <div class="container-fluid">
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div
-                class="collapse navbar-collapse"
-                id="bs-example-navbar-collapse-1"
-              >
-                <ul class="nav navbar-nav">
-                  <li>
-                    <a href="#" class="nav-item"
-                      ><span class="glyphicon glyphicon-home"></span> Trang
-                      chủ</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="nav-item"
-                      ><span class="glyphicon glyphicon-list"></span> Giới
-                      thiệu</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="nav-item"
-                      ><span class="glyphicon glyphicon-earphone"></span> Liên
-                      hệ</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="nav-item"
-                      ><span class="glyphicon glyphicon-envelope"></span> Góp
-                      ý</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="nav-item"
-                      ><span class="glyphicon glyphicon-question-sign"></span>
-                      Hỏi Đáp</a
-                    >
-                  </li>
-                  <li class="dropdown">
-                    <a
-                      href="#"
-                      class="dropdown-toggle"
-                      data-toggle="dropdown"
-                      role="button"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      ><span class="glyphicon glyphicon-user"></span> Tài
-                      Khoản<span class="caret"></span
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Đăng nhập</a></li>
-                      <li><a href="#">Quên mật khẩu</a></li>
-                      <li><a href="#">Đăng ký thành viên</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Đăng xuất</a></li>
-                      <li><a href="#">Đổi mật khẩu</a></li>
-                      <li><a href="#">Cập nhật hồ sơ</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Đơn hàng</a></li>
-                      <li><a href="#">Hàng đã mua</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#" class="nav-item">English</a></li>
-                  <li><a href="#" class="nav-item">Tiếng việt</a></li>
-                </ul>
-              </div>
-              <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-          </nav>
-        </header>
+      <div class="row header_area_top">
+        <div class="shopping-mall">
+          <h1>Online Shopping mall</h1>
+          <h5>The center point of the professional programing</h5>
+        </div>
+        <img src="../../images/header-object.png" class="pull-right" />
       </div>
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Giới Thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liên Hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Góp Ý</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hỏi Đáp</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tài Khoản
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Đăng nhập</a>
+                  <a class="dropdown-item" href="#">Quên mật khẩu</a>
+                  <a class="dropdown-item" href="#">Đăng ký thành viên</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Đăng xuất</a>
+                  <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                  <a class="dropdown-item" href="#">Cập nhật hồ sơ</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Đơn hàng</a>
+                  <a class="dropdown-item" href="#">Hàng đã mua</a>
+                </div>
+              </li>
+         
+          </div>
+        </nav>
+      </div>
+
+      <div class="row">
+        <article class="col-sm-9">
+          <h1>Welcome to bootstrap</h1>
+        </article>
+        <aside class="col-sm-3">Phải</aside>
+      </div>
+      <footer class="row footer">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <p>FPT Polytechnic &copy; 2022. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@
     <!-- bootstrap -->
     <script src="../../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
     <div class="container">
@@ -40,60 +41,49 @@
             <div class="panel-body">
               <form action="">
                 <div class="row">
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Mã nhân viên</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Họ và Tên</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                </div>
-                <div class="row">
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Câu lạc bộ</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Lương</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">$</div>
-                        <input type="text" class="form-control" />
-                        <div class="input-group-addon">.00</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Thưởng</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">$</div>
-                        <input type="text" class="form-control" />
-                        <div class="input-group-addon">.00</div>
-                      </div>
-                  </div>
-                  <div action="" class="form-group col-sm-6">
-                    <label for="">Phụ cấp</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">$</div>
-                      <input type="text" class="form-control" />
-                      <div class="input-group-addon">.00</div>
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Mã nhân viên</label>
+                        <input placeholder="nhập mã nhân viên" type="text" class="form-control">
                     </div>
-                  </div>
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Họ và Tên</label>
+                        <input type="text" placeholder="nhập họ và tên"  class="form-control">
+                    </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-sm-12">
-                    <label for="">Ghi chú</label>
-                    <textarea class="form-control" rows="3"></textarea>
-                  </div>
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Câu lạc bộ</label>
+                        <!-- <input type="text" class="form-control"> -->
+                        <select id="clb" class="form-control">
+                            <option value="volvo">Đà Nẵng</option>
+                            <option value="saab">Hồ Chí Minh</option>
+                            <option value="opel">Bình Thuận</option>
+                          </select>
+                    </div>
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Lương</label>
+                        <input type="text" placeholder="nhập lương cầu thử"  class="form-control">
+                    </div>
                 </div>
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-floppy-disk"></span> Lưu
-                </button>
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-stop"></span> Hủy
-                </button>
-              </form>
+                <div class="row">
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Thưởng</label>
+                        <input type="text" placeholder="nhập tiền thưởng"  class="form-control">
+                    </div>
+                    <div action="" class="form-group col-sm-6">
+                        <label for="">Phụ cấp</label>
+                        <input type="text" placeholder="nhập phụ cấp (nếu có)"  class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <label for="">Ghi chú</label>
+                        <textarea class="form-control" placeholder="nhập ghi chú nếu có" rows="3"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Lưu</button>
+                <button class="btn btn-default"><span class="glyphicon glyphicon-stop"></span> Hủy</button>
+            </form>
             </div>
             <div class="panel-footer">Vui lòng nhập thông tin cầu thủ.</div>
           </div>
@@ -102,8 +92,8 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <div class="panel-title">
-                <span class="glyphicon glyphicon-th-list"></span> Bảng lương
-                tháng 12
+                <span class="glyphicon glyphicon-th-list"></span> Bảng lương tháng
+                12
               </div>
             </div>
             <table
