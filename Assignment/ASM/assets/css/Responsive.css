@@ -1,0 +1,45 @@
+/* mobile & tablet */
+@media (max-width: 991px) {
+   
+  }
+  
+  /* tablet */
+  @media (min-width: 768px) and (max-width: 991px) {
+   
+  
+  }
+  
+  /* mobile */
+  @media (max-width: 767px) {
+    .main .row .col-3{
+        display: none;
+    }
+    .banner{
+        padding: 20px 15px;
+        padding-top: 95px;
+    }
+    .carousel-item img{
+        height: 230px;
+    }
+    .card{
+        margin-bottom: 15px;
+    }
+    .list-footer-item{
+        font-size: 12px;
+        padding-right: 6px;
+    }
+    .main{
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    .pagination{
+        margin-bottom: 0;
+    }
+  }
+  
+  /* lg */
+  @media (max-width: 1199px) {
+
+  }
+  
+  
