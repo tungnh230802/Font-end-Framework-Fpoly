@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card-body{
+        padding: 0;
+      }
+      p{
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body ng-app="myapp">
+    <div class="container"  ng-controller="ctrl">
+      <div class="card">
+        <div class="card-header">{{title}}</div>
+        <div class="card-body list-group">
+          <li class="list-group-item"><p>Họ và tên: {{sv.fullname}}</p></li>
+          <li class="list-group-item"><p>Email: {{sv.email}}</p></li>
+          <li class="list-group-item"><p>Phái: {{sv.gender}}</p></li>
+          <li class="list-group-item"><p>Ngày sinh: {{sv.birthday}}</p></li>
+          <li class="list-group-item"><p>Học phí: {{sv.schoolfee}}</p></li>
+          <li class="list-group-item"><p>Điểm: {{sv.mark}}</p></li>
+        </div>
+        <div class="card-footer text-muted">Phái: true là nam, false là nữa</div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script>
+    var app = angular.module("myapp", []);
+    app.controller("ctrl", func);
+    function func($scope) {
+      $scope.title = "THÔNG TIN SINH VIÊN";
+      $scope.sv = {
+        username: "Hoangtung",
+        password: "Hoangtung230802",
+        fullname: "Nguyễn Hoàng Tùng",
+        email: "tungnhps17361@fpt.edu.vn",
+        gender: "True",
+        birthday: "2002-06-23",
+        schoolfee: "8000000",
+        mark: "10",
+      };
+    }
+  </script>
+</html>

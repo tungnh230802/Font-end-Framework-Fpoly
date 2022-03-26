@@ -7,7 +7,8 @@
     cursor: pointer;
 }
 
-button:focus{
+button:focus,
+input{
     box-shadow: unset !important;
     outline: unset;
 }
@@ -23,4 +24,19 @@ body{
 ul{
     list-style: none;
     display: flex;
+}
+
+.btn-primary{
+    background-color: #0075b4 !important;
+}
+
+.btn-primary:hover{
+    background-color: #036092 !important;
+}
+a{
+    color: unset;
+}
+a:hover{
+    color: unset;
+    text-decoration: none;
 }

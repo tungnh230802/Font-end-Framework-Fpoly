@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tiêu đề trang</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      header {
+        height: 120px;
+        position: relative;
+      }
+      main {
+        min-height: 400px;
+      }
+      footer {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body ng-app="app">
+    <div class="container" ng-controller="ctl">
+      <header class="bg-info"><div id="chao"></div></header>
+      <main class="bg-secondary"></main>
+      <footer class="bg-dark text-center pt-3 text-white">
+        <p>Họ tên: <b>{{ht}}</b></p>
+        <p>Email: <b>meomeo@gờmeo.com</b></p>
+      </footer>
+    </div>
+  </body>
+  <script>
+    var app = angular.module("app", []);
+    app.controller("ctl", func);
+    function func($scope) {
+      var hoten = sessionStorage.getItem("hoten");
+      if (hoten != "") {
+        $scope.ht = hoten;
+      }
+
+      var email = sessionStorage.getItem("email");
+      if (email != "") {
+        $scope.email = email;
+      }
+    }
+  </script>
+</html>

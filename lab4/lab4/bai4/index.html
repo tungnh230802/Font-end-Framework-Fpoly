@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body ng-app="dangnhap">
+    <div class="container  justify-content-center d-flex mt-5" ng-controller="ctrl">
+      <div class="card" style="width: 500px; border: 1px solid #28a745;">
+        <div class="card-header text-center" style="background-color: #28a745; border: unset; color: white;">THÀNH VIÊN ĐĂNG NHẬP</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label>UserName</label>
+              <input type="text" class="form-control" ng-model="username" />
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" ng-model="password" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success" ng-click="dn()">Đăng nhập</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="listsv.js"></script>
+  <script>
+    var app = angular.module("dangnhap", []);
+    app.controller("ctrl", funcDN);
+    function funcDN($scope) {
+      $scope.dn = function () {
+        var u = $scope.username;
+        var p = $scope.password;
+        var tc = false;
+        var sv;
+        for (var i = 0; i < listsv.length; i++) {
+          sv = listsv[i];
+          if (u == sv.username && p == sv.password) {
+            tc = true;
+            break;
+          }
+        }
+        if (tc) {
+          alert("Đăng nhập Thành công");
+          sessionStorage.setItem("username", sv.username);
+          sessionStorage.setItem("hoten", sv.fullname);
+          sessionStorage.setItem("email", sv.email);
+          document.location = "main.html";
+        } else {
+          alert("Đăng nhập thất Bại");
+        }
+      };
+    }
+  </script>
+</html>

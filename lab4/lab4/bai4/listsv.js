@@ -1,0 +1,32 @@
+var listsv= [
+       {
+          username: "NguyenHoangTung2323",
+          password: "@iuenhiulam",
+          fullname: "Nguyễn Hoàng Tùng",
+          email: "tungnhps17468@fpt.edu.vn",
+          gender: "True",
+          birthday: "2002-06-25",
+          schoolfee: "5000000",
+          mark: "10",
+        },
+        {
+          username: "NguyenHoangTung2506",
+          password: "@iuenhiulam",
+          fullname: "Nguyễn Hoàng Tùng",
+          email: "tungnhps17468@fpt.edu.vn",
+          gender: "True",
+          birthday: "2002-06-25",
+          schoolfee: "5000000",
+          mark: "10",
+        },
+        {
+          username: "NguyenHoangTung",
+          password: "@iuenhiulam",
+          fullname: "Nguyễn Hoàng Tùng",
+          email: "tungnhps17468@fpt.edu.vn",
+          gender: "True",
+          birthday: "2002-06-25",
+          schoolfee: "5000000",
+          mark: "10",
+        },
+]

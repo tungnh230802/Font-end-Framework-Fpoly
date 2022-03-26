@@ -6,6 +6,7 @@
 /* header */
 .bg-wrap {
   background-color: #f4f4f4;
+  /* padding-top: 20px; */
 }
 
 .header-area {
@@ -43,7 +44,7 @@
 
 .main {
   padding: 40px auto;
-  padding-top: 40px;
+  padding-top: 94px;
   padding-bottom: 20px;
   border-top: 1px solid #c8bebe;
   background: #ffffff;
@@ -72,6 +73,8 @@
 .card-title {
   margin-top: 6px;
   color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .card-text:last-child {
@@ -159,4 +162,8 @@
 }
 .page-link:focus {
   box-shadow: none;
+}
+
+.card-header{
+  background-color: white;
 }
